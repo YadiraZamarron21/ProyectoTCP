@@ -5,15 +5,32 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:servidor.Views"
              mc:Ignorable="d" 
-                    d:DesignHeight="450" d:DesignWidth="800">
-    <DockPanel Margin="10">
-        <TextBlock FontWeight="DemiBold" DockPanel.Dock="Top" TextAlignment="Center" FontSize="30">Galería</TextBlock>
-        <ListBox  Background="#C4DFDF" ItemsSource="{Binding Fotos}">
-            <ListBox.ItemTemplate>
-                <DataTemplate>
-                    <Image Source="{Binding fotobitmap}" Width="200" Height="200"/>
-                </DataTemplate>
-            </ListBox.ItemTemplate>
-        </ListBox>
+                    d:DesignHeight="450" d:DesignWidth="870">
+
+    <DockPanel  Margin="10">
+        <TextBlock FontWeight="DemiBold" DockPanel.Dock="Top" TextAlignment="Center" FontSize="30" Margin="10">Galería</TextBlock>
+
+        <ScrollViewer  Background="#C4DFDF" HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto" Width="550">
+            <ItemsControl VerticalAlignment="Center" Background="#C4DFDF" ItemsSource="{Binding Fotos}">
+                <ItemsControl.ItemsPanel>
+                    <ItemsPanelTemplate>
+                        <WrapPanel IsItemsHost="True" Orientation="Horizontal" />
+                    </ItemsPanelTemplate>
+                </ItemsControl.ItemsPanel>
+                <ItemsControl.ItemTemplate>
+                    <DataTemplate>
+                        <Border BorderBrush="#C4DFDF" BorderThickness="2" CornerRadius="8" Margin="5">
+                            <Grid>
+                                <Image Source="{Binding fotobitmap}" Width="220" Height="300" Stretch="Uniform"/>
+                            
+                            </Grid>
+                        </Border>
+                    </DataTemplate>
+                </ItemsControl.ItemTemplate>
+              
+            </ItemsControl>
+        </ScrollViewer>
     </DockPanel>
+
+
 </UserControl>

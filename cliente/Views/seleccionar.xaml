@@ -14,8 +14,8 @@
             <RowDefinition Height="10*"></RowDefinition>
         </Grid.RowDefinitions>
         <Image Source="{Binding Direccion}"></Image>
-        <Button Grid.Row="1" Command="{Binding TomarFotoCommand}" Margin="4" Background="#C4DFDF" >Seleccionar</Button>
-        <Button Grid.Row="2" Command="{Binding EnviarFotoCommand}" Margin="4" Background="#C4DFDF">Enviar</Button>
-        <Button Grid.Row="3" Command="{Binding EliminarFotoCommand}" Margin="4" Background="#C4DFDF">Eliminar</Button>
+        <Button Grid.Row="1" Command="{Binding TomarFotoCommand}" Margin="10,5,10,5" Background="#C4DFDF" >Seleccionar</Button>
+        <Button Grid.Row="2" Command="{Binding EnviarFotoCommand}" Margin="10,5,10,5" Background="#C4DFDF">Enviar</Button>
+        <Button Grid.Row="3" Command="{Binding EliminarFotoCommand}" Margin="10,5,10,5" Background="#C4DFDF">Eliminar</Button>
     </Grid>
 </UserControl>

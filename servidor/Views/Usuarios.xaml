@@ -11,7 +11,7 @@
         <TextBlock Background="#C4DFDF"  TextAlignment="Center"  FontSize="14" Text="{Binding IP}" DockPanel.Dock="Top"></TextBlock>
 
         <TextBlock DockPanel.Dock="Top" TextAlignment="Center" Margin="10" FontWeight="DemiBold" FontSize="15">Usuarios Conectados:</TextBlock>
-        <ListBox Background="#C4DFDF"  FontSize="14" ItemsSource="{Binding Usuarios}">
+        <ListBox Background="#C4DFDF" FontSize="14" ItemsSource="{Binding Usuarios}">
             <ListBox.ItemsPanel>
                 <ItemsPanelTemplate>
                     <StackPanel></StackPanel>
@@ -19,7 +19,7 @@
             </ListBox.ItemsPanel>
             <ListBox.ItemTemplate>
                 <DataTemplate>
-                    <TextBlock Text="{Binding}"></TextBlock>
+                    <TextBlock TextAlignment="Center" Text="{Binding}"></TextBlock>
                 </DataTemplate>
             </ListBox.ItemTemplate>
         </ListBox>

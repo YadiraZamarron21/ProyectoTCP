@@ -15,7 +15,7 @@
         <ListBox.ItemTemplate>
             <DataTemplate>
                 <StackPanel>
-                    <Image Width="350" Source="{Binding}" ></Image>
+                    <Image Width="180" Margin="5" Source="{Binding}" ></Image>
                 </StackPanel>
             </DataTemplate>
         </ListBox.ItemTemplate>
