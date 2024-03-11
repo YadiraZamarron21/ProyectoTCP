@@ -105,6 +105,7 @@ namespace cliente.ViewModel
 
         private void EnviarFoto()
         {
+
             fotosservice.EnviarMensaje(Foto);
             Fotos.Add(Direccion);
             Foto = new FotoDto();
