@@ -1,0 +1,16 @@
+﻿<Window x:Class="servidor.Views.Fotos"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:viewmodel="clr-namespace:servidor.ViewModel"
+        xmlns:local="clr-namespace:servidor.Views"
+        mc:Ignorable="d"
+        Title="Fotos" Height="450" Width="800" Background="#E3F4F4">
+    <Window.DataContext>
+        <viewmodel:FotosViewModels></viewmodel:FotosViewModels>
+    </Window.DataContext>
+    <DockPanel >
+        <local:Usuarios DockPanel.Dock="Left" Margin="10" Width="200"></local:Usuarios>
+        <local:Carrusel ></local:Carrusel>
+    </DockPanel>
+</Window>

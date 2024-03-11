@@ -1,0 +1,15 @@
+﻿<UserControl x:Class="cliente.Views.conectarse"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:cliente.Views"
+             mc:Ignorable="d" 
+             d:DesignHeight="200" d:DesignWidth="270" Background="#354259">
+    <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+        <Label Foreground="#D2E9E9">Dirección IP:</Label>
+        <TextBox  Background="#E3F4F4"  TextAlignment="Center" Text="{Binding Ip}" Width="90"/>
+
+        <Button Margin="5" Background="#C4DFDF" HorizontalAlignment="Center"  Command="{Binding ConectarseCommand}">Conectar</Button>
+    </StackPanel>
+</UserControl>

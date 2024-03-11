@@ -1,0 +1,33 @@
+﻿<Window x:Class="cliente.Views.Fotos"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:cliente.Views" xmlns:viewmodel="clr-namespace:cliente.ViewModel"
+        mc:Ignorable="d"
+           Title="Fotos" Height="450" Width="800" Background="#C4DFDF" >
+    <DockPanel  >
+        <DockPanel.DataContext>
+            <viewmodel:FotosViewModel/>
+
+        </DockPanel.DataContext>
+        <ContentControl DockPanel.Dock="Left" Width="300" >
+            <ContentControl.Resources>
+                <local:conectarse x:Key="conectarse"></local:conectarse>
+                <local:seleccionar  x:Key="seleccionar"></local:seleccionar>
+            </ContentControl.Resources>
+
+            <ContentControl.Style >
+                <Style TargetType="ContentControl">
+                    <Setter Property="Content" Value="{StaticResource conectarse}"></Setter>
+                    <Style.Triggers>
+                        <DataTrigger Binding="{Binding Conectado}" Value="true">
+                            <Setter Property="Content" Value="{StaticResource seleccionar}"></Setter>
+                        </DataTrigger>
+                    </Style.Triggers>
+                </Style>
+            </ContentControl.Style>
+        </ContentControl>
+        <local:lista Background="#C4DFDF"></local:lista>
+    </DockPanel>
+</Window>
