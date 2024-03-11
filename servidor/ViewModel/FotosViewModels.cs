@@ -70,6 +70,7 @@ namespace servidor.ViewModel
                         base64 = e.foto,
                     });
 
+                    //hjgfjjhgjhb
 
                     //int contador = 0;
                     //string imagen64 = e.foto;
